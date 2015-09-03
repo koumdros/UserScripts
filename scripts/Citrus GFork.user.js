@@ -139,15 +139,15 @@ script-list-set
 **********************************************************************************************/
 
 (function ()
-{
-    var scripts = new Array(),
-        pathname = decodeURIComponent(document.location.pathname);
+ {
+		var scripts = new Array(),
+			pathname = decodeURIComponent(document.location.pathname);
 
-    TSL.addStyle("OverFlowCode", ".Comment .Message p {overflow-x:auto;}");
+		TSL.addStyle("OverFlowCode", ".Comment .Message p {overflow-x:auto;}");
 
-    OrangifyPage();
-    if (pathname.match(/(\w|-)+\/forum\/(post|discussion)\//) && document.getElementById("Form_Rating"))
-    {
+		OrangifyPage();
+		if (pathname.match(/(\w|-)+\/forum\/(post|discussion)\//) && document.getElementById("Form_Rating"))
+     {
         TSL.addStyle("", ".choiceButtons {text-align:center; width: 80px;}");
 
         var po = document.querySelector(".PostOptions, .CommentOptions"),
@@ -175,7 +175,7 @@ script-list-set
             lbl.setAttribute("style", "display: none !important;");
 
             options[0].click();
-        }
+        };
 
         btn2.onclick = function ()
         {
@@ -191,7 +191,7 @@ script-list-set
             lbl.removeAttribute("style");
 
             options[3].click();
-        }
+        };
 
         hld.appendChild(btn1);
         hld.appendChild(btn2);
@@ -244,10 +244,10 @@ script-list-set
 
                 //document.querySelector("#script-table tr td:nth-child(2)").appendChild(document.getElementById("UserSets"));
 
-                TSL.addStyle("TheBlackLagoon", "#UserSets {position: fixed !important;display: inline-table !important;float: none !important;left: 30px !important;top: 68px!important;padding: 2px 5px;background-color: yellow;border-radius: 5px;z-index: 200!important;visibility: hidden!important;opacity: 1!important;}"
-                           + "#UserSets:hover {visibility: visible!important;opacity: 1!important;}"
-                           + '#UserSets:before {content: "Sets ▼ " !important;position: fixed !important;display: inline-block !important;left: 40px !important;top: 62px!important;margin: 2px 10px;padding: 1px 10px!important;background-color: yellow;border-radius: 5px;z-index: 200!important;visibility:visible!important;opacity: 1!important;}'
-                           + "#UserSets li {position: relative !important;display: inline !important;float: left!important;clear: both!important;min-width: 200px!important;margin-bottom: 2px!important;padding: 2px 8px;background-color: white;border-radius: 2px; text-align:left;}"
+                TSL.addStyle("TheBlackLagoon", "#UserSets {position: fixed !important;display: inline-table !important;float: none !important;left: 30px !important;top: 68px!important;padding: 2px 5px;background-color: yellow;border-radius: 5px;z-index: 200!important;visibility: hidden!important;opacity: 1!important;}" +
+                           "#UserSets:hover {visibility: visible!important;opacity: 1!important;}" +
+                           '#UserSets:before {content: "Sets ▼ " !important;position: fixed !important;display: inline-block !important;left: 40px !important;top: 62px!important;margin: 2px 10px;padding: 1px 10px!important;background-color: yellow;border-radius: 5px;z-index: 200!important;visibility:visible!important;opacity: 1!important;}' +
+                           "#UserSets li {position: relative !important;display: inline !important;float: left!important;clear: both!important;min-width: 200px!important;margin-bottom: 2px!important;padding: 2px 8px;background-color: white;border-radius: 2px; text-align:left;}"
                            );
             }
 
@@ -278,29 +278,29 @@ script-list-set
     function OrangifyPage()
     {
         //#region Adding CSS Styles E3E2E2
-        TSL.addStyle("CitrusGF_Main", "body {font-size: 14px;}"
-                      + "#main-header, #Head {background-color: orange !important;} #Head a, #site-nav a {color: yellow !important;}"
-                      + "#site-name {text-decoration: underline; color: white;}"
-                      + "#title-image {height: 50px; border-radius: 20px; margin-left: 5px;}"
-                      + "#title-text {font-size: 40px; color:black; font-family:'Open Sans',sans-serif; font-weight: 400; margin: 0 10px; line-height: 48px;}"
-                      + "#title-subtext {color: yellow !important; font-size: 10px; text-decoration: none; position: absolute; left: 210px; top: 43px; font-weight: 400 !important;}"
-                      + "#nav-user-info {top: 3px;}"
-                      + "pre {background-color: #FFFF99; padding: 5px; margin-left: 30px; padding: 5px 10px;}"
-                      + "code {padding: 2px 4px; font-size: 90%; color: #C7254E; background-color: #F9F2F4; white-space: nowrap; border-radius: 4px; font-family: Menlo,Monaco,Consolas,'Courier New',monospace;}"
-                      + "pre > code {white-space: pre; background-color: transparent;}"
+        TSL.addStyle("CitrusGF_Main", "body {font-size: 14px;}" +
+                      "#main-header, #Head {background-color: orange !important;} #Head a, #site-nav a {color: yellow !important;}" +
+                      "#site-name {text-decoration: underline; color: white;}" +
+                      "#title-image {height: 50px; border-radius: 20px; margin-left: 5px;}" +
+                      "#title-text {font-size: 40px; color:black; font-family:'Open Sans',sans-serif; font-weight: 400; margin: 0 10px; line-height: 48px;}" +
+                      "#title-subtext {color: yellow !important; font-size: 10px; text-decoration: none; position: absolute; left: 210px; top: 43px; font-weight: 400 !important;}" +
+                      "#nav-user-info {top: 3px;}" +
+                      "pre {background-color: #FFFF99; padding: 5px; margin-left: 30px; padding: 5px 10px;}" +
+                      "code {padding: 2px 4px; font-size: 90%; color: #C7254E; background-color: #F9F2F4; white-space: nowrap; border-radius: 4px; font-family: Menlo,Monaco,Consolas,'Courier new',monospace;}" +
+                      "pre > code {white-space: pre; background-color: transparent;}"
                       );
 
         TSL.addStyle("CitrusGF_ScriptPage", "#additional-info img {max-width: 98%; border: 1px solid orange; box-shadow: 5px 5px 2px #888888; margin: 5px 0; padding: 2px; color: yellow; }");
 
         if (document.location.pathname.match(/[\w-]+\/forum\//i))
         {
-            TSL.addStyle("CitrusGF_Forum", "body:not(.Settings) a:not(.Button) { color: #F19E06; }"
-                + "body a.Username { color: #E17205 !important; }"
-                + ".QuoteAuthor a[href*='forum/profile/'] { color: #FB4507 !important;}"
-                + "a[href*='forum/profile/'] { color: #25C614 !important; font-weight: 600;}"
-                + "code {padding: 1px 3px; border-radius: 3px; border: 1px solid; background-color: #F9EBD2; color: #EB5100; margin: 0;}"
-                + "#title-subtext {top: 45px;}"
-                + "blockquote {background-color: #FFFFA4; margin: 5px 0px 5px 30px; padding: 5px;}"
+            TSL.addStyle("CitrusGF_Forum", "body:not(.Settings) a:not(.Button) { color: #F19E06; }" +
+				"body a.Username { color: #E17205 !important; }" +
+                ".QuoteAuthor a[href*='forum/profile/'] { color: #FB4507 !important;}" +
+                "a[href*='forum/profile/'] { color: #25C614 !important; font-weight: 600;}" +
+                "code {padding: 1px 3px; border-radius: 3px; border: 1px solid; background-color: #F9EBD2; color: #EB5100; margin: 0;}" +
+                "#title-subtext {top: 45px;}" +
+                "blockquote {background-color: #FFFFA4; margin: 5px 0px 5px 30px; padding: 5px;}"
                 );
         }
         //#endregion
@@ -310,17 +310,17 @@ script-list-set
 
         var link = document.createElement("a");
         link.href = "/";
-        link.innerHTML = '<img id="title-image" src="https://i.imgur.com/RqikjW1.jpg" />'
-                        + '<span id="title-text">Greasy Fork&nbsp;</span>'
-                        + '<a id="title-subtext" href="/users/1455-timidscript">100% Citrusy Goodness by <b>TimidScript</b></span>';
+        link.innerHTML = '<img id="title-image" src="https://i.imgur.com/RqikjW1.jpg" />' +
+                        '<span id="title-text">Greasy Fork&nbsp;</span>' +
+                        '<a id="title-subtext" href="/users/1455-timidscript">100% Citrusy Goodness by <b>TimidScript</b></span>';
         sname.appendChild(link);
 
 
         if (pathname.match(/\/[\w-]+\/scripts/) && document.querySelector("#script-list-set ul")) //Script Listing
         {
-            TSL.addStyle("TheBlackLagoon", "#UserSets {display: block; background-color: yellow; margin: 2px 10px; border-radius: 5px; padding: 2px 10px;}"
-                + "#UserSets li {display: inline-block; padding: 2px 8px; background-color: white; border-radius: 2px;}"
-                + "#UserSets li + li {margin-left: 1px}"
+            TSL.addStyle("TheBlackLagoon", "#UserSets {display: block; background-color: yellow; margin: 2px 10px; border-radius: 5px; padding: 2px 10px;}" +
+				"#UserSets li {display: inline-block; padding: 2px 8px; background-color: white; border-radius: 2px;}" +
+                "#UserSets li + li {margin-left: 1px}"
                 );
 
             var sets = document.querySelector("#script-list-set ul");
@@ -441,9 +441,9 @@ script-list-set
         switch (document.body.getAttribute("PageType"))
         {
             case "PersonalProfile":
-                cell.innerHTML += '<span class="filterL" style="margin-left: 10px;" title="Library Filter">L</span>'
-                                + '<span class="filterU" title="Unlisted Filter">U</span>'
-                                + '<span class="filterD" title="Deleted Filter">D</span>';
+                cell.innerHTML += '<span class="filterL" style="margin-left: 10px;" title="Library Filter">L</span>' +
+                                '<span class="filterU" title="Unlisted Filter">U</span>' +
+                                '<span class="filterD" title="Deleted Filter">D</span>';
                 break;
             case "UserProfile":
                 cell.innerHTML += '<span class="filterL" style="margin-left: 10px;">L</span>';
@@ -459,34 +459,34 @@ script-list-set
         scriptTable.appendChild(document.createElement("tbody"));
         document.body.appendChild(scriptTable);
 
-        TSL.addStyle("CitrusGS_Table", "#script-table {display: block; margin: 0 5px 5px 5px;} body {background-color: #EFEFB1; margin: 0;}"
-            + "#script-table thead td {background-color: orange; border-radius: 0 0 5px 5px; box-shadow: 3px 3px 2px #888888;}"
-            + "#script-table thead td:hover {cursor:pointer; background-color: yellow;}"
-            + "#script-table thead td:first-child:hover {cursor:default; background-color: orange;}"
-            + "#script-table td {width: auto; padding: 2px 5px; text-align:center;}"
-            + "#script-table thead tr td:nth-child(3) {width: 120px; display: block;}"
-            //+ ".total-rating-count {display: inline-block; min-width: 1em; text-align: center; padding: 0px 0.25em; border-radius: 10px;}"
-            + ".total-rating-count, .good-rating-count, .ok-rating-count, .bad-rating-count {display: inline-block; min-width: 1em; padding: 1px 3px; border-radius: 3px;}"
-            + ".total-rating-count {background-color: rgba(0, 0, 255, 0.1);}"
-            + "#script-table tbody td {background-color: #FFFBDB;}"
-            + "#script-table tbody td:first-child{background-color: #F9D5A6;}"
-            + "#script-table tbody td:nth-child(2){width: 99%; background-color: white;text-align:left;}"
-            + "#script-table tbody tr:hover td {background-color: yellow;}"
-            + ".currentSort {background-color: yellow !important;}"
-            + ".loadingSort {background-color: #FDFDC3 !important;}"
-            + ".type-library, .type-unlisted, .type-deleted, .filterL, .filterD, .filterU {font-size:smaller; display: inline-block; border-radius: 3px; padding: 0 5px; border: 1px solid black;}"
-            + ".type-library, .type-unlisted, .type-deleted {box-shadow: 2px 2px 1px #888888; margin: 2px 5px 3px 0;}"
-            + ".type-library, .filterL {background-color: #CEFD8A;}"
-            + ".type-deleted, .filterD {background-color: #F77A7A;}"
-            + ".type-unlisted, .filterU {background-color: #CEE7F3;}"
-            + ".type-library:before {content: 'Library';}"
-            + ".type-deleted:before {content: 'Deleted';}"
-            + ".type-unlisted:before {content: 'Unlisted';}"
-            + ".filterL, .filterD, .filterU {float: left; margin: 2px 3px 0 0; padding: 0 15px;}"
-            + ".filterL:hover, .filterD:hover, .filterU:hover {cursor: default;}"
-            + "#notice {margin:5px 5px 0 5px; background-color: #FDBB45;padding: 3px 5px; color: blue;}"
-            + "#notice .filterD { background-color: #C0BEBE; float: none; color: black;}"
-            + "thetitle {margin-bottom: 3px;} .theauthor{font-size:small;}"
+        TSL.addStyle("CitrusGS_Table", "#script-table {display: block; margin: 0 5px 5px 5px;} body {background-color: #EFEFB1; margin: 0;}" +
+            "#script-table thead td {background-color: orange; border-radius: 0 0 5px 5px; box-shadow: 3px 3px 2px #888888;}" +
+            "#script-table thead td:hover {cursor:pointer; background-color: yellow;}" +
+            "#script-table thead td:first-child:hover {cursor:default; background-color: orange;}" +
+            "#script-table td {width: auto; padding: 2px 5px; text-align:center;}" +
+            "#script-table thead tr td:nth-child(3) {width: 120px; display: block;}" +
+            //".total-rating-count {display: inline-block; min-width: 1em; text-align: center; padding: 0px 0.25em; border-radius: 10px;}" +
+            ".total-rating-count, .good-rating-count, .ok-rating-count, .bad-rating-count {display: inline-block; min-width: 1em; padding: 1px 3px; border-radius: 3px;}" +
+            ".total-rating-count {background-color: rgba(0, 0, 255, 0.1);}" +
+            "#script-table tbody td {background-color: #FFFBDB;}" +
+            "#script-table tbody td:first-child{background-color: #F9D5A6;}" +
+            "#script-table tbody td:nth-child(2){width: 99%; background-color: white;text-align:left;}" +
+            "#script-table tbody tr:hover td {background-color: yellow;}" +
+            ".currentSort {background-color: yellow !important;}" +
+            ".loadingSort {background-color: #FDFDC3 !important;}" +
+            ".type-library, .type-unlisted, .type-deleted, .filterL, .filterD, .filterU {font-size:smaller; display: inline-block; border-radius: 3px; padding: 0 5px; border: 1px solid black;}" +
+            ".type-library, .type-unlisted, .type-deleted {box-shadow: 2px 2px 1px #888888; margin: 2px 5px 3px 0;}" +
+            ".type-library, .filterL {background-color: #CEFD8A;}" +
+            ".type-deleted, .filterD {background-color: #F77A7A;}" +
+            ".type-unlisted, .filterU {background-color: #CEE7F3;}" +
+            ".type-library:before {content: 'Library';}" +
+            ".type-deleted:before {content: 'Deleted';}" +
+            ".type-unlisted:before {content: 'Unlisted';}" +
+            ".filterL, .filterD, .filterU {float: left; margin: 2px 3px 0 0; padding: 0 15px;}" +
+            ".filterL:hover, .filterD:hover, .filterU:hover {cursor: default;}" +
+            "#notice {margin:5px 5px 0 5px; background-color: #FDBB45;padding: 3px 5px; color: blue;}" +
+            "#notice .filterD { background-color: #C0BEBE; float: none; color: black;}" +
+            "thetitle {margin-bottom: 3px;} .theauthor{font-size:small;}"
         );
     }
 
@@ -503,12 +503,12 @@ script-list-set
         var tbody = document.getElementById("script-table").getElementsByTagName("tbody")[0];
         if (clear) tbody.innerHTML = "";
 
-        if (scripts.length == 0)
+        if (scripts.length === 0)
         {
             var row = tbody.insertRow(-1);
             cell = row.insertCell(-1);
             cell.setAttribute("style", "text-align:center; font-weight: bold; font-style: oblique;");
-            cell.textContent = "No Scripts"
+            cell.textContent = "No Scripts";
             cell.setAttribute("colspan", 7);
         }
 
@@ -520,7 +520,7 @@ script-list-set
         {
             var page = document.URL.match(/[&\?]page=(\d+)/);
             if (page) page = page[1]; else page = 1;
-            offset = 1 + +((page - 1) * 100);
+            offset = 1 + (+((page - 1) * 100));
             var maxnum = scripts.length + offset;
             prefix = prefix.lPad("0", maxnum.toString().length);
         }
@@ -551,8 +551,8 @@ script-list-set
             cell = row.insertCell(-1);
             var el = document.createElement("div");
             el.className = "thetitle";
-            el.innerHTML = "<a href='https://greasyfork.org/scripts/"
-                            + script.id + "' style='margin-right: 10px;'><b>" + script.name + "</b></a>";
+            el.innerHTML = "<a href='https://greasyfork.org/scripts/" +
+                            script.id + "' style='margin-right: 10px;'><b>" + script.name + "</b></a>";
             if (script.type == "library")
             {
                 el.innerHTML += '<span class="type-library" />';
@@ -677,7 +677,7 @@ script-list-set
         url = url.replace(/\?$/, "");
         if (url.indexOf("?") < 0) url = url.replace("&", "?");
 
-        console.warn("getScriptListing IN: " + url)
+        console.warn("getScriptListing IN: " + url);
         GM_xmlhttpRequest({
             url: url,
             method: "GET",
@@ -784,7 +784,7 @@ script-list-set
 
             var tbody = document.getElementById("script-table").getElementsByTagName("tbody")[0];
 
-            document.createAttribute
+            document.createAttribute;
 
             TSL.addStyle("", "#Depreciated{border: 1px solid; background-color: #FBC783 !important; color: orangered; height: 15px; font-weight: 600;}");
             var row = tbody.insertRow(-1),
